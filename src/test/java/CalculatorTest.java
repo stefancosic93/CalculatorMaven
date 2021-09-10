@@ -22,4 +22,5 @@ public class CalculatorTest {
     public void div() {
         assertEquals(1, Calculator.div(2, 2), 0.212121);
     }
+    
 }
