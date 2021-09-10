@@ -4,6 +4,6 @@ node {
     checkout scm
   }
   stage("Compile Package") {
-    sh 'mvn test'
+    sh 'mvn clean test'
   }
 }
