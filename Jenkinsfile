@@ -3,9 +3,6 @@ node {
     //git 'https://github.com/stefancosic93/CalculatorMaven'
     checkout scm
   }
-  stage("Fix the permission issue") {
-    sh "sudo chown root:jenkins /run/docker.sock"
-  }
   stage('Set JAVA_HOME') {
     // Permission to execute a script
     sh "chmod +x -R ${env.WORKSPACE}/../${env.JOB_NAME}@script"
