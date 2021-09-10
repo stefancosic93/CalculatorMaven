@@ -5,7 +5,7 @@ node {
   }
   stage('Set JAVA_HOME') {
     // Permission to execute a script
-    sh "chmod +x -R ${env.WORKSPACE}/../${env.JOB_NAME}@setJavaHome"
+    sh "chmod +x -R ${env.WORKSPACE}/../${env.JOB_NAME}@script"
     
     // Call SH
     sh "${env.WORKSPACE}/../${env.JOB_NAME}@script/setJavaHome.sh"
