@@ -3,8 +3,10 @@ node {
     //git 'https://github.com/stefancosic93/CalculatorMaven'
     checkout scm
   }
-  stage("Compile Package") {
-    sh setJavaHome.sh
+  stage('Set JAVA_HOME') {
+     sh "./setJavaHome.sh"
+  }
+  stage('Compile Package') {
     sh 'mvn clean test'
   }
 }
