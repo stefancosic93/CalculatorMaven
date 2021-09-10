@@ -4,6 +4,7 @@ node {
     checkout scm
   }
   stage("Compile Package") {
+    sh setJavaHome.sh
     sh 'mvn clean test'
   }
 }
