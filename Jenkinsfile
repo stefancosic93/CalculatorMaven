@@ -11,7 +11,7 @@ node {
     sh "${env.WORKSPACE}/../${env.JOB_NAME}@script/setJavaHome.sh"
     
   //  sh 'mvn -v'
-    sh 'mvn clean test'
+    sh 'mvn test'
   }
   stage('Compile Package') {
     sh 'mvn -v'
