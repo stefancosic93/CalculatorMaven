@@ -14,6 +14,6 @@ node {
     bat 'mvn test'
   }
   stage('Others') {
-    bat 'mvn install'
+    bat 'mvn sonar:sonar'
   }
 }
