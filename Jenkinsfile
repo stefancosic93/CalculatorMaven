@@ -14,6 +14,6 @@ node {
     bat 'mvn test'
   }
   stage('Sonar') {
-    bat 'mvn sonar:sonar'
+    bat 'mvn clean verify sonar:sonar -Dsonar.login=f260730b8650aba93bb9cdad3310b95dbb1eec4e'
   }
 }
