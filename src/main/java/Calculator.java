@@ -8,7 +8,6 @@ public class Calculator {
     public static int add (int num1, int num2) {
         System.out.println("Called ADD function with: " + num1 + " and " + num2);
         return num1 + num2;
-        return 2;
     }
 
     public static int sub (int num1, int num2) {
