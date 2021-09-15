@@ -16,4 +16,18 @@ node {
   stage('Sonar') {
     bat 'mvn clean verify sonar:sonar -Dsonar.login=f260730b8650aba93bb9cdad3310b95dbb1eec4e'
   }
+  stage('Upload to Artifactory') {
+    def server = Artifactory.server 'artifactory-server'
+    
+    def uploadSpec = """{
+      "files": [
+        {
+          "pattern": "target/*.jar",
+          "target": "MavenRepo/stefan.cosic/"
+        }
+     ]
+    }"""
+    server.upload spec: uploadSpec    
+ }
+  
 }
