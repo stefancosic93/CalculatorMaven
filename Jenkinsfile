@@ -13,7 +13,7 @@ node {
     bat 'mvn -v'
     bat 'mvn test'
   }
-  stage('Others') {
+  stage('Sonar') {
     bat 'mvn sonar:sonar'
   }
 }
