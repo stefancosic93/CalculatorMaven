@@ -14,6 +14,6 @@ node {
     bat 'mvn test'
   }
   stage('Others') {
-    bat 'mvn -v'
+    bat 'mvn install'
   }
 }
