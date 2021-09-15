@@ -11,9 +11,9 @@ node {
     //sh "${env.WORKSPACE}/../${env.JOB_NAME}@script/setJavaHome.sh"
     
     bat 'mvn -v'
-    bat 'mvn test'
+   // bat 'mvn test'
   }
   stage('Others') {
-    bat 'mvn -v'
+  //  bat 'mvn -v'
   }
 }
