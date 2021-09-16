@@ -10,6 +10,8 @@ def utilsSteps = new UtilitiesSteps(this)
 node {
    new ScriptedStage(this).execute("Checkout SCM")
 //   new ScriptedStage(this).execute("Tests")
+//   new ScriptedStage(this).execute("Sonar")
+//   new ScriptedStage(this).execute("Artifactory")
 //   new ScriptedStage(this).execute('Foo')
 }
 /*
