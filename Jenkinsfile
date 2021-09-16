@@ -1,5 +1,5 @@
-@Library('SharedLibSTF_Jenkins') _
-
+@Library('SharedLibSTF_Jenkins')
+import welcomeJob
 welcomeJob "lambdatest"
 
 node {
