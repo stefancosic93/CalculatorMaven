@@ -10,6 +10,7 @@ def utilsSteps = new UtilitiesSteps(this)
 def comander = new ScriptedStage(this, scm)
 
 node {
+        echo "ENV:${env}"
         comander.execute("Checkout SCM")
 //   comander.execute("Tests")
 //   comander.execute("Sonar")
