@@ -8,8 +8,8 @@ def utils = new Utilities(env, steps)
 def utilsSteps = new UtilitiesSteps(this)
 
 node {
-   new ScriptedStage(this).execute('Foo', true)
    new ScriptedStage(this).execute("Checkout SCM")
+   new ScriptedStage(this).execute('Foo')
 }
 /*
 
