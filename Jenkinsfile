@@ -1,7 +1,13 @@
 @Library('SharedLibSTF_Jenkins')
 import org.demo.Utilities
+import org.demo.UtilitiesMaven.*
 
 def utils = new Utilities(env, steps)
+
+node {
+  mvn this, 'clean package'
+}
+/*
 
 node {
   stage('Use SharedLibs') {
@@ -43,3 +49,4 @@ node {
     }
    
 }
+*/
