@@ -3,7 +3,7 @@ import org.demo.Utilities
 import org.demo.ScriptedStage
 
 def utils = new Utilities(env, steps)
-def comander = new ScriptedStage(this, scm)
+def comander = new ScriptedStage(this, scm, env, steps)
 
 node {
         comander.execute("Checkout SCM")
