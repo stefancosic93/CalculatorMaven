@@ -9,7 +9,7 @@ def utilsSteps = new UtilitiesSteps(this)
 
 node {
    new ScriptedStage(this).execute('Foo', true)
-   new ScriptedStage(this).scmCheckout('SCM Checkout')
+   new ScriptedStage(this).scmCheckout()
 }
 /*
 
