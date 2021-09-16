@@ -7,6 +7,7 @@ node {
   stage('Use SharedLibs') {
     utils.fun1()
     echo utils.fun2(2)
+    utils.checkout()
   }
   stage('SCM Checkout') {
     //git 'https://github.com/stefancosic93/CalculatorMaven'
