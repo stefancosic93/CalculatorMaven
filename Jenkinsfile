@@ -1,12 +1,15 @@
 @Library('SharedLibSTF_Jenkins')
 import org.demo.Utilities
 import org.demo.UtilitiesSteps
+import org.demo.ScriptedStage
 
 def utils = new Utilities(env, steps)
 
 def utilsSteps = new UtilitiesSteps(this)
+
+def 
 node {
-  utilsSteps.mvn '-v'
+   new ScriptedStage(this).execute('Foo', true)
 }
 /*
 
