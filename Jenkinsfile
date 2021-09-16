@@ -1,16 +1,11 @@
 @Library('SharedLibSTF_Jenkins')
 import org.demo.Utilities
-import org.demo.UtilitiesSteps
 import org.demo.ScriptedStage
 
 def utils = new Utilities(env, steps)
-
-def utilsSteps = new UtilitiesSteps(this)
-
 def comander = new ScriptedStage(this, scm)
 
 node {
-        echo "ENV:${env}"
         comander.execute("Checkout SCM")
 //   comander.execute("Tests")
 //   comander.execute("Sonar")
