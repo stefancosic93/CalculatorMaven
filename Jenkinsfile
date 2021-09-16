@@ -1,5 +1,7 @@
 @Library('SharedLibSTF_Jenkins') _
 
+welcomeJob "lambdatest"
+
 node {
   stage('SCM Checkout') {
     //git 'https://github.com/stefancosic93/CalculatorMaven'
@@ -33,8 +35,6 @@ node {
       server.upload spec: uploadSpec, buildInfo: buildInfo
       server.publishBuildInfo buildInfo 
     }
-  stage('use shared Lib') {
-    welcomeJob "lambdatest"
-  }
+
   
 }
