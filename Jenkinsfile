@@ -7,7 +7,6 @@ def utils = new Utilities(env, steps)
 
 def utilsSteps = new UtilitiesSteps(this)
 
-def 
 node {
    new ScriptedStage(this).execute('Foo', true)
 }
