@@ -1,3 +1,5 @@
+@Library('SharedLibSTF_Jenkins') _
+
 node {
   stage('SCM Checkout') {
     //git 'https://github.com/stefancosic93/CalculatorMaven'
@@ -27,10 +29,12 @@ node {
         }
      ]
     }"""
-    def buildInfo = Artifactory.newBuildInfo()
-    server.upload spec: uploadSpec, buildInfo: buildInfo
-    server.publishBuildInfo buildInfo 
- }
-  
+      def buildInfo = Artifactory.newBuildInfo()
+      server.upload spec: uploadSpec, buildInfo: buildInfo
+      server.publishBuildInfo buildInfo 
+    }
+  stage('use shared Lib') {
+    welcomeJob "lambdatest"
+  }
   
 }
