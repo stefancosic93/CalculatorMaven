@@ -1,4 +1,13 @@
+@Library('SharedLibSTF_Jenkins')
+import org.demo.Utilities
+
+def utils = new Utilities(env, steps)
+
 node {
+  stage('Use SharedLibs') {
+    utils.fun1()
+    echo utils.fun2(2)
+  }
   stage('SCM Checkout') {
     //git 'https://github.com/stefancosic93/CalculatorMaven'
     checkout scm
@@ -31,6 +40,5 @@ node {
       server.upload spec: uploadSpec, buildInfo: buildInfo
       server.publishBuildInfo buildInfo 
     }
-
-  
+   
 }
