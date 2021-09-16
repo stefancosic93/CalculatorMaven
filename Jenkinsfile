@@ -1,7 +1,3 @@
-@Library('SharedLibSTF_Jenkins')
-import welcomeJob
-welcomeJob "lambdatest"
-
 node {
   stage('SCM Checkout') {
     //git 'https://github.com/stefancosic93/CalculatorMaven'
