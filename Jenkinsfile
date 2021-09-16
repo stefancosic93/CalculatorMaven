@@ -1,6 +1,6 @@
 @Library('SharedLibSTF_Jenkins')
 import org.demo.Utilities
-import org.demo.UtilitiesMaven.*
+import static org.demo.UtilitiesMaven.*
 
 def utils = new Utilities(env, steps)
 
