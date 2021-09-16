@@ -1,11 +1,12 @@
 @Library('SharedLibSTF_Jenkins')
 import org.demo.Utilities
-import static org.demo.UtilitiesMaven.*
+import org.demo.UtilitiesSteps
 
 def utils = new Utilities(env, steps)
 
+def utilsSteps = new UtilitiesSteps(this)
 node {
-  mvn this, 'clean package'
+  utilsSteps.mvn '-v'
 }
 /*
 
