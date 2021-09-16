@@ -7,8 +7,10 @@ def utils = new Utilities(env, steps)
 
 def utilsSteps = new UtilitiesSteps(this)
 
+def comander = new ScriptedStage(this, scm)
+
 node {
-   new ScriptedStage(this).execute("Checkout SCM")
+   comander.execute("Checkout SCM")
 //   new ScriptedStage(this).execute("Tests")
 //   new ScriptedStage(this).execute("Sonar")
 //   new ScriptedStage(this).execute("Artifactory")
