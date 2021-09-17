@@ -12,12 +12,6 @@ def comander = new ScriptedStage(this, scm, env, steps)
 node {
    
   def params = readJSON file: "${env.WORKSPACE}\\params.json"
-  echo params.RunTests
-  if (params.RunTests) {
-    echo "da"
-  } else {
-    echo "ne"
-  }
 
      comander.execute(params)
  //    comander.execute("Tests")
