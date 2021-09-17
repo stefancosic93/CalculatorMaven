@@ -1,7 +1,7 @@
 {
   "Checkout":true,
-  "RunTests":true,
-  "RunSonar":true,
+  "RunTests":false,
+  "RunSonar":false,
   "RunArtifactory":true,
   "Tests":"mvn test",
   "Sonar":"mvn clean verify sonar:sonar",
