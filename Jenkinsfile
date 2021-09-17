@@ -4,7 +4,7 @@ import org.demo.ScriptedStage
 
 import groovy.json.JsonSlurper
 def inputFile = new File("params.json")
-def InputJSON = new JsonSlurper().parseText(inputFile)
+def InputJSON = new JsonSlurper().parse(inputFile)
 
 inputJson.each { k, v ->
   println k
