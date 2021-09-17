@@ -5,8 +5,7 @@ import org.demo.ScriptedStage
 import groovy.json.*
   
 def inputFile = new File("params.json")
-def inputJSON = new JsonSlurper().parse(inputFile)
-def keys = inputJSON.keySet() as List
+echo inputFile
 
 
 
