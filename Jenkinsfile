@@ -2,13 +2,16 @@
 import org.demo.Utilities
 import org.demo.ScriptedStage
 
-import groovy.json.JsonSlurper
+import groovy.json.*
+  
 def inputFile = new File("params.json")
-def InputJSON = new JsonSlurper().parse(inputFile)
 
-inputJson.each { k, v ->
-  println k
-}
+def json = readJSON file: './params.json'
+def jsonFormat = JsonOutput.toJson(json)
+prettyJSON = JsonOutput.prettyPrint(jsonFormat)
+echo "${prettyJSON}"  
+
+
 
 def utils = new Utilities(env, steps)
 def comander = new ScriptedStage(this, scm, env, steps)
