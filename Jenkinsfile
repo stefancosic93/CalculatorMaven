@@ -4,16 +4,20 @@ import org.demo.ScriptedStage
 
 import groovy.json.*
   
-def inputFile = new File("params.json")
-
+def map = new groovy.json.JsonSlurper().parse(new File('params.json'))
+map.each { key, value ->
+  println "$key : $value"
+}
 
 def utils = new Utilities(env, steps)
 def comander = new ScriptedStage(this, scm, env, steps)
 
 node {
   def params = readJSON file: "${env.WORKSPACE}\\params.json"
+  
 
-     comander.execute(params)
+
+ //    comander.execute(params)
  //    comander.execute("Tests")
  //    comander.execute("Sonar")
  //    comander.execute("Artifactory")
