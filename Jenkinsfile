@@ -11,7 +11,7 @@ def comander = new ScriptedStage(this, scm, env, steps)
 
 node {
     def params = readJSON file: "${env.WORKSPACE}\\params.json"
-    def server = Artifactory.server 'artifactory-server'
+    def server = Artifactory.server params.ArtifactoryServer
     comander.execute(params, server)
 }
 
