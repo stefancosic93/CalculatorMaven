@@ -11,8 +11,24 @@ def comander = new ScriptedStage(this, scm, env, steps)
 
 node {
     def params = readJSON file: "${env.WORKSPACE}\\params.json"
-    def server = Artifactory.server params.ArtifactoryServer
-    comander.execute(params, server)
+//    def server = Artifactory.server params.ArtifactoryServer
+    comander.execute(params)
+  
+    stage('Upload to Artifactory') {
+      def server = Artifactory.server 'artifactory-server'
+
+      def uploadSpec = """{
+        "files": [
+          {
+            "pattern": "target/*.jar",
+            "target": "MavenRepo/stefan.cosic/"
+          }
+       ]
+      }"""
+        def buildInfo = Artifactory.newBuildInfo()
+        server.upload spec: uploadSpec, buildInfo: buildInfo
+        server.publishBuildInfo buildInfo 
+      }
 }
 
 /*
