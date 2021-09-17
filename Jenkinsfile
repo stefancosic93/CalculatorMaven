@@ -15,9 +15,9 @@ node {
 
   //echo params.Tests
 
-    echo ${params.par1}
-    echo ${params.par2}
-    echo ${params.par3}
+    echo params.par1
+    echo params.par2
+    echo params.par3
   
      comander.execute(params)
 
