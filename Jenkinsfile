@@ -11,7 +11,7 @@ def comander = new ScriptedStage(this, scm, env, steps)
 
 node {
   
-  def map = new groovy.json.JsonSlurper().parse(new File('params.json'))
+  def map = new groovy.json.JsonSlurper().parse(new File('${env.WORKSPACE}\\params.json'))
 map.each { key, value ->
   println "$key : $value"
 }
