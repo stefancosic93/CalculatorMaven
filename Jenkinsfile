@@ -12,6 +12,7 @@ def comander = new ScriptedStage(this, scm, env, steps)
 
 node {
   def params = readJSON file: "${env.WORKSPACE}\\params.json"
+  echo params
 
      comander.execute("Checkout SCM")
  //    comander.execute("Tests")
