@@ -13,7 +13,7 @@ node {
    
   def params = readJSON file: "${env.WORKSPACE}\\params.json"
 
- //    comander.execute(params)
+     comander.execute(params)
  //    comander.execute("Tests")
  //    comander.execute("Sonar")
  //    comander.execute("Artifactory")
