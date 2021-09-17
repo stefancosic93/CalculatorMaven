@@ -9,7 +9,7 @@ node {
      comander.execute("Checkout SCM")
      comander.execute("Tests")
      comander.execute("Sonar")
-//   comander.execute("Artifactory")
+     comander.execute("Artifactory")
 //   comander.execute('Foo')
 }
 /*
