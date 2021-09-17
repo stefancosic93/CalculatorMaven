@@ -1,8 +1,9 @@
 {
-  "Checkout":"Checkout",
-  "RunTests":"RunTests",
-  "RunSonar":"RunSonar",
-  
+  "Checkout":true,
+  "RunTests":true,
+  "RunSonar":true,
+  "Sonar1":"sonar",
+  "Tests2":"mvn test222",
   "Tests":"mvn test",
   "Sonar":"mvn clean verify sonar:sonar",
   "SonarLogin":"-Dsonar.login=f260730b8650aba93bb9cdad3310b95dbb1eec4e",
