@@ -1,8 +1,14 @@
 @Library('SharedLibSTF_Jenkins')
 import org.demo.Utilities
 import org.demo.ScriptedStage
-def params = readJSON file: 'params.json'
 
+import groovy.json.JsonSlurper
+def inputFile = new File(".\params.json")
+def InputJSON = new JsonSlurper().parseText(inputFile)
+
+inputJson.each { k, v ->
+  println k
+}
 
 def utils = new Utilities(env, steps)
 def comander = new ScriptedStage(this, scm, env, steps)
