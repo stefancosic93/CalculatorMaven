@@ -5,11 +5,11 @@ import org.demo.ScriptedStage
 import groovy.json.JsonSlurper
 def inputFile = new File("setJavaHome.txt")
 //def InputJSON = new JsonSlurper().parse(inputFile)
-
+/*
 inputJson.each { k, v ->
   println k
 }
-
+*/
 def utils = new Utilities(env, steps)
 def comander = new ScriptedStage(this, scm, env, steps)
 
