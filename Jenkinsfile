@@ -6,14 +6,13 @@ import groovy.json.*
   
 def inputFile = new File("params.json")
 
-  def params = readJSON file: "${env.WORKSPACE}\\params.json"
-
-
 
 def utils = new Utilities(env, steps)
 def comander = new ScriptedStage(this, scm, env, steps)
 
 node {
+  def params = readJSON file: "${env.WORKSPACE}\\params.json"
+
      comander.execute("Checkout SCM")
  //    comander.execute("Tests")
  //    comander.execute("Sonar")
