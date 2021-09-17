@@ -5,7 +5,8 @@ import org.demo.ScriptedStage
 import groovy.json.*
   
 def inputFile = new File("params.json")
-echo inputFile
+
+  def params = readJSON file: "${env.WORKSPACE}\\params.json"
 
 
 
