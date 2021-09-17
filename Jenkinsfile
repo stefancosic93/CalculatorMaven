@@ -1,15 +1,17 @@
 @Library('SharedLibSTF_Jenkins')
 import org.demo.Utilities
 import org.demo.ScriptedStage
+def params = readJSON file: 'params.json'
+
 
 def utils = new Utilities(env, steps)
 def comander = new ScriptedStage(this, scm, env, steps)
 
 node {
      comander.execute("Checkout SCM")
-     comander.execute("Tests")
-     comander.execute("Sonar")
-     comander.execute("Artifactory")
+ //    comander.execute("Tests")
+ //    comander.execute("Sonar")
+ //    comander.execute("Artifactory")
 //   comander.execute('Foo')
 }
 /*
