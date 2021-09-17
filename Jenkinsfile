@@ -14,11 +14,11 @@ node {
   def params = readJSON file: "${env.WORKSPACE}\\params.json"
 
   //echo params.Tests
-
+/*
     echo params.par1
     echo params.par2
     echo params.par3
-  
+ */ 
      comander.execute(params)
 
 }
