@@ -1,6 +1,6 @@
 {
   "RunCheckout":["true"],
-  "RunTests":["true"],
+  "RunTests":"true",
   "RunSonar":["true"],
   "Tests":"mvn test",
   "Sonar":"mvn clean verify sonar:sonar",
