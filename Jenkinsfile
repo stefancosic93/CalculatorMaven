@@ -6,9 +6,9 @@ def utils = new Utilities(env, steps)
 def comander = new ScriptedStage(this, scm, env, steps)
 
 node {
-        comander.execute("Checkout SCM")
-//   comander.execute("Tests")
-//   comander.execute("Sonar")
+     comander.execute("Checkout SCM")
+     comander.execute("Tests")
+     comander.execute("Sonar")
 //   comander.execute("Artifactory")
 //   comander.execute('Foo')
 }
